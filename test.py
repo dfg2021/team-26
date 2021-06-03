@@ -8,6 +8,6 @@ data = pd.read_excel(r'.\\Goal13.xlsx')
 
 clean = pd.DataFrame(data, columns=['SeriesCode', 'SeriesDescription', 'GeoAreaName', 'Value', 'Time_Detail'])
 
-# Hardcoding oof
-# NOTE: Find a non-hardcoded version of separating the data
-emdata = clean.iloc[7292:7959, :]
+emdata = clean.groupby(["SeriesCode"]).get_group('EN_ATM_GHGT_NAIP')
+
+# print(emdata.tail())
