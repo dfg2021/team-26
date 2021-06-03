@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-import matplotlib as pt
 
 # Select the relevant dataset, which in this case, is C02 Emissions
 # Data cleaning
